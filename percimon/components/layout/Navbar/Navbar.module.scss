@@ -1,0 +1,55 @@
+@import '@styles/variables';
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0 20px;
+    background-color: black;
+
+    &__logo{
+        width: 150px;
+        height: auto;
+        color: $color-text-primary;
+        cursor: pointer;
+        &:hover{
+            color: $color-text-secondary;
+        }
+    }
+    &__svg{
+        width: 100%;
+        height: auto;
+    }
+    &__list{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+        list-style: none;
+
+        & a{
+            text-decoration: none;
+            font-family: $font-family-primary;
+            font-size: $font-size-sm;
+            text-transform: uppercase;
+            }
+    }
+
+    &__social{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+
+        svg{
+            width: 24px;
+            height: 24px;
+            color: $color-text-primary;
+            cursor: pointer;
+            &:hover{
+                color: $color-text-secondary;
+            }
+        }
+    }
+}
