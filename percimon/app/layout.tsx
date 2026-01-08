@@ -28,6 +28,7 @@ export default function RootLayout({
       <body className={`${montserrat.variable} ${openSans.variable} antialiased`}>
         <Navbar />
         <main>{children}</main>
+        <footer>{children}</footer>
       </body>
     </html>
   );

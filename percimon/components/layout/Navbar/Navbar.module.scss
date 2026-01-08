@@ -6,6 +6,9 @@
     align-items: center;
     height: 80px;
     padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     background-color: black;
 
     &__logo{
@@ -33,6 +36,9 @@
             font-family: $font-family-primary;
             font-size: $font-size-sm;
             text-transform: uppercase;
+            &:hover{
+                color: $color-text-secondary;
+            }
             }
     }
 
