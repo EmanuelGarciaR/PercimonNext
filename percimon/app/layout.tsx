@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Navbar from "@components/layout/Navbar/Navbar";
+import Footer from "@components/footer/Footer"
 import { Montserrat, Open_Sans } from "next/font/google";
 import "./globals.css";
 
@@ -28,7 +29,7 @@ export default function RootLayout({
       <body className={`${montserrat.variable} ${openSans.variable} antialiased`}>
         <Navbar />
         <main>{children}</main>
-        <footer>{children}</footer>
+        <Footer/>
       </body>
     </html>
   );
