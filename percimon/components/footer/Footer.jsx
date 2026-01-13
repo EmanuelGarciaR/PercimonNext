@@ -1,20 +1,31 @@
+'use client'
+
 import Logo from '../layout/Navbar/Logo';
 import styles from './Footer.module.scss'
 import Link from 'next/link'
 import { Linkedin, Instagram, Facebook} from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa'
 import { AiOutlineSpotify } from "react-icons/ai";
+import { useRef } from 'react';
+
+import useFooterAnimations from '@hooks/useFooterAnimations'
 
 export default function Footer(){
+    const logoFooter = useRef()
+    const  socialIcons = useRef()
+    const menuColumns = useRef()
+
+    useFooterAnimations({logoFooter, socialIcons, menuColumns})
+
     return (
         <footer className={styles.footer}>
-            <div className= {styles.footer__logo_top}>
+            <div ref={menuColumns} className= {styles.footer__logo_top}>
                 <section className={styles.footer__logo_column}>
-                    <div className={styles.footer__logo}>
+                    <div ref={logoFooter} className={styles.footer__logo}>
                         <Logo className={styles.footer__svg}/>
                     </div>
 
-                    <div className={styles.footer__redes}>
+                    <div ref={socialIcons} className={styles.footer__redes}>
                         <FaWhatsapp className={styles.footer__icons}/>
                         <Instagram className={styles.footer__icons}/>
                         <Facebook className={styles.footer__icons}/>
