@@ -55,5 +55,5 @@ export default function useFooterAnimations({ logoFooter, socialIcons, menuColum
             once: true
         }
     })
-}, [])
+})
 }
